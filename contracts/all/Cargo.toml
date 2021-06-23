@@ -15,7 +15,7 @@ scale = { package = "parity-scale-codec", version = "2.1", default-features = fa
 scale-info = { version = "0.6", default-features = false, features = ["derive"], optional = true }
 
 erc20 = { path = "../erc20/", default-features = false, features = ["ink-as-dependency"] }
-miner_erc20 = { path = "../miner_erc20/", default-features = false, features = ["ink-as-dependency"] }
+miner_erc20 = { path = "../miner-erc20/", default-features = false, features = ["ink-as-dependency"] }
 
 [lib]
 name = "all"
