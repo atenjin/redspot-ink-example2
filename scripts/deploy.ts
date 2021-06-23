@@ -69,15 +69,15 @@ async function run() {
   }
   
 
-  console.log("second");
-  const result = await all.query.balanceOf(someAddr);
-  console.log(result.output?.toString());
+  // console.log("second");
+  // const result = await all.query.balanceOf(someAddr);
+  // console.log(result.output?.toString());
 
   
-  console.log("third");
-  await all.tx.mine(someAddr, 999);
-  const result2 = await erc20Minable.query.balanceOf(someAddr);
-  console.log(result2.output?.toString());
+  // console.log("third");
+  // await all.tx.mine(someAddr, 999);
+  // const result2 = await erc20Minable.query.balanceOf(someAddr);
+  // console.log(result2.output?.toString());
 
   api.disconnect();
 }
