@@ -39,5 +39,10 @@ pub mod all {
             let value2 = (*self.erc20_minable).balance_of(who);
             value1 + value2
         }
+
+        #[ink(message)]
+        pub fn mine(&mut self, who: AccountId, value: Balance) {
+            (*self.erc20_minable).mine(who, value)
+        }
     }
 }

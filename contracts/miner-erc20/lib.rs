@@ -163,7 +163,7 @@ mod erc20_ownable {
         }
 
         #[ink(message)]
-        pub fn miner(&mut self, to: AccountId, value: Balance) {
+        pub fn mine(&mut self, to: AccountId, value: Balance) {
             let enty = self.erc20.balances.entry(to);
             let old_balance = enty.or_insert(0);
             *old_balance += value;
