@@ -162,7 +162,7 @@ mod erc20_ownable {
             erc20::Impl::transfer_from(self, &from, &to, value)
         }
 
-        #[ink(message)]
+        #[ink(message, payable)]
         pub fn mine(&mut self, to: AccountId, value: Balance) {
             let enty = self.erc20.balances.entry(to);
             let old_balance = enty.or_insert(0);

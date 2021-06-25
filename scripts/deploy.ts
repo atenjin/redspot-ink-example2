@@ -25,7 +25,7 @@ async function run() {
   // If the contract exists, it will be returned, otherwise a new contract will be created.
   const erc20 = await erc20Factory.deploy("new", "1000000", {
     gasLimit: "400000000000",
-    value: "1000 UNIT",
+    value: "1000 DOT",
   });
 
   console.log("");
