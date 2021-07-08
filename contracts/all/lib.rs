@@ -39,11 +39,15 @@ pub mod all {
             use ink_lang::ForwardCall;
             // let value1 = (*self.erc20).balance_of(who);
             // 等价于
-            let value1 = <&Erc20>::call(&*self.erc20)
+            // let value1 = <&Erc20>::call(&*self.erc20)
+            //     .balance_of(who)
+            //     .fire()
+            //     .expect("encountered error while calling Erc20::balance_of");
+
+            let value1 = self.erc20.call()
                 .balance_of(who)
                 .fire()
                 .expect("encountered error while calling Erc20::balance_of");
-
             let value2 = (*self.erc20_minable).balance_of(who);
             value1 + value2
         }
