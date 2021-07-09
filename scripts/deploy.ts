@@ -68,6 +68,20 @@ async function run() {
     console.log("ignore this error");
   }
   
+  let b = await all.query.balanceOf(someAddr);  
+
+  let balance2 = await api.query.system.account(signer);
+  console.log("alice Balance: ", balance2.toHuman());
+  let b2 = await api.query.system.account(all.address);
+  console.log("contract Balance: ", b2.toHuman());
+
+  let r = await all.tx.balanceOf(someAddr);
+  console.log(r.events);
+
+  let balance3 = await api.query.system.account(signer);
+  console.log("alice Balance: ", balance3.toHuman());
+  let balance4 = await api.query.system.account(all.address);
+  console.log("contract Balance: ", balance4.toHuman());
 
   // console.log("second");
   // const result = await all.query.balanceOf(someAddr);

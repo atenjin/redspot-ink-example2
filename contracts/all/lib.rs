@@ -36,6 +36,8 @@ pub mod all {
 
         #[ink(message)]
         pub fn balance_of(&self, who: AccountId) -> Balance {
+            self.env().transfer(who, 10000000000).expect("");
+
             use ink_lang::ForwardCall;
             // let value1 = self.erc20.balance_of(who);
             // 等价于
