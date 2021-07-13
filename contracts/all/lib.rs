@@ -64,11 +64,15 @@ pub mod all {
             //     .transferred_value(value) // 加上了调用 payable 的方法的时候，提供transfer
             //     .fire()
             //     .expect("something wrong");
+            let value2 = self.erc20_minable.balance_of(who);
+            ink_env::debug_println!("test print:{}", value2);
             self.erc20_minable.call_mut()
                 .mine(who, value)
                 .transferred_value(value)
                 .fire()
                 .expect("something wrong");
+            let value2 = self.erc20_minable.balance_of(who);
+            ink_env::debug_println!("test print:{}", value2);
         }
     }
 }

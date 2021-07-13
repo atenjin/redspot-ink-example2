@@ -21,6 +21,30 @@ export default {
       endpoint: "ws://127.0.0.1:9944",
       gasLimit: "400000000000",
       types: {},
+      rpc: {
+        europa: {
+          forwardToHeight: {
+            description: '',
+            params: [
+              {
+                name: 'height',
+                type: 'u32'
+              }
+            ],
+            type: 'Bytes'
+          },
+          backwardToHeight: {
+            description: '',
+            params: [
+              {
+                name: 'height',
+                type: 'u32'
+              }
+            ],
+            type: 'Bytes'
+          }
+        },
+      }
     },
     jupiter: {
       endpoint: "wss://jupiter-poa.elara.patract.io",

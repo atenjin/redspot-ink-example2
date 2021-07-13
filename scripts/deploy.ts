@@ -61,6 +61,8 @@ async function run() {
   await erc20Minable.tx.transfer(someAddr, 456);
   console.log("transfer 2")
 
+  await api.rpc.europa.forwardToHeight(200);
+
   console.log("first");
   try {
     await all.tx.transfer1(someAddr, 123);
@@ -83,15 +85,15 @@ async function run() {
   let balance4 = await api.query.system.account(all.address);
   console.log("contract Balance: ", balance4.toHuman());
 
-  // console.log("second");
-  // const result = await all.query.balanceOf(someAddr);
-  // console.log(result.output?.toString());
+  console.log("second");
+  const result = await all.query.balanceOf(someAddr);
+  console.log(result.output?.toString());
 
   
-  // console.log("third");
-  // await all.tx.mine(someAddr, 999);
-  // const result2 = await erc20Minable.query.balanceOf(someAddr);
-  // console.log(result2.output?.toString());
+  console.log("third");
+  await all.tx.mine(someAddr, 999);
+  const result2 = await erc20Minable.query.balanceOf(someAddr);
+  console.log(result2.output?.toString());
 
   api.disconnect();
 }
