@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "all"
-version = "3.0.0-rc3"
+version = "0.1.0"
 dependencies = [
  "erc20",
  "ink_env",
@@ -141,12 +141,6 @@ dependencies = [
 
 [[package]]
 name = "cfg-if"
-version = "0.1.10"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4785bdd1c96b2a846b2bd7cc02e86b6b3dbf14e7e53446c4f54c92a361040822"
-
-[[package]]
-name = "cfg-if"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
@@ -219,7 +213,7 @@ version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06ed27e177f16d65f0f0c22a213e17c696ace5dd64b14258b52f9417ccb52db4"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "crossbeam-utils",
 ]
 
@@ -229,7 +223,7 @@ version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "94af6efb46fef72616855b036a624cf27ba656ffc9be1b9a3c931cfc7749a9a9"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "crossbeam-epoch",
  "crossbeam-utils",
 ]
@@ -240,7 +234,7 @@ version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4ec02e091aa634e2c3ada4a392989e7c3116673ef0ac5b72232439094d73b7fd"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "crossbeam-utils",
  "lazy_static",
  "memoffset",
@@ -253,7 +247,7 @@ version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d82cfc11ce7f2c3faef78d8a684447b40d503d9681acebed6cb728d45940c4db"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "lazy_static",
 ]
 
@@ -317,7 +311,7 @@ checksum = "e78d4f1cc4ae33bbfc157ed5d5a5ef3bc29227303d595861deb238fcec4e9457"
 
 [[package]]
 name = "erc20"
-version = "3.0.0-rc3"
+version = "0.1.0"
 dependencies = [
  "ink_env",
  "ink_lang",
@@ -350,7 +344,7 @@ version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7fcd999463524c52659517fe2cea98493cfe485d10565e7b0fb07dbba7ad2753"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "libc",
  "wasi",
 ]
@@ -390,20 +384,20 @@ dependencies = [
 
 [[package]]
 name = "ink_allocator"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
- "wee_alloc",
+ "cfg-if",
 ]
 
 [[package]]
 name = "ink_env"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "arrayref",
  "blake2",
- "cfg-if 1.0.0",
+ "cfg-if",
  "derive_more",
  "ink_allocator",
  "ink_metadata",
@@ -422,8 +416,8 @@ dependencies = [
 
 [[package]]
 name = "ink_lang"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "derive_more",
  "ink_env",
@@ -438,8 +432,8 @@ dependencies = [
 
 [[package]]
 name = "ink_lang_codegen"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "blake2",
  "derive_more",
@@ -457,8 +451,8 @@ dependencies = [
 
 [[package]]
 name = "ink_lang_ir"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "blake2",
  "either",
@@ -471,8 +465,8 @@ dependencies = [
 
 [[package]]
 name = "ink_lang_macro"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "ink_lang_codegen",
  "ink_lang_ir",
@@ -484,8 +478,8 @@ dependencies = [
 
 [[package]]
 name = "ink_metadata"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "derive_more",
  "impl-serde",
@@ -497,16 +491,16 @@ dependencies = [
 
 [[package]]
 name = "ink_prelude"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
 ]
 
 [[package]]
 name = "ink_primitives"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "ink_prelude",
  "parity-scale-codec",
@@ -515,11 +509,11 @@ dependencies = [
 
 [[package]]
 name = "ink_storage"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "array-init",
- "cfg-if 1.0.0",
+ "cfg-if",
  "criterion",
  "derive_more",
  "ink_env",
@@ -533,8 +527,8 @@ dependencies = [
 
 [[package]]
 name = "ink_storage_derive"
-version = "3.0.0-rc3"
-source = "git+https://github.com/paritytech/ink#1ed78687bb7e7d0da9620c7879c2f5664f6f4e0a"
+version = "3.0.0-rc4"
+source = "git+https://github.com/paritytech/ink#eabb11706464dcede99c02ff481123d37bb7a15b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -608,7 +602,7 @@ version = "0.4.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "51b9bbe6c47d51fc3e1a9b945965946b4c44142ab8792c50835a980d362c2710"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
 ]
 
 [[package]]
@@ -625,12 +619,6 @@ checksum = "59accc507f1338036a0477ef61afdae33cde60840f4dfe481319ce3ad116ddf9"
 dependencies = [
  "autocfg",
 ]
-
-[[package]]
-name = "memory_units"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8452105ba047068f40ff7093dd1d9da90898e63dd61736462e9cdda6a90ad3c3"
 
 [[package]]
 name = "metis_contract"
@@ -738,7 +726,7 @@ dependencies = [
 
 [[package]]
 name = "miner_erc20"
-version = "3.0.0-rc3"
+version = "0.1.0"
 dependencies = [
  "ink_env",
  "ink_lang",
@@ -1018,7 +1006,7 @@ version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bdd819984fe6ce661ebed1f451c0848d301a05ff56b8a4b0ae420de7dca046ea"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "derive_more",
  "parity-scale-codec",
  "scale-info-derive",
@@ -1109,7 +1097,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b362ae5752fd2137731f9fa25fd4d9058af34666ca1966fb969119cc35719f12"
 dependencies = [
  "block-buffer",
- "cfg-if 1.0.0",
+ "cfg-if",
  "cpufeatures",
  "digest",
  "opaque-debug",
@@ -1305,7 +1293,7 @@ version = "0.2.74"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d54ee1d4ed486f78874278e63e4069fc1ab9f6a18ca492076ffb90c5eb2997fd"
 dependencies = [
- "cfg-if 1.0.0",
+ "cfg-if",
  "wasm-bindgen-macro",
 ]
 
@@ -1361,18 +1349,6 @@ checksum = "e828417b379f3df7111d3a2a9e5753706cae29c41f7c4029ee9fd77f3e09e582"
 dependencies = [
  "js-sys",
  "wasm-bindgen",
-]
-
-[[package]]
-name = "wee_alloc"
-version = "0.4.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dbb3b5a6b2bb17cb6ad44a2e68a43e8d2722c997da10e928665c72ec6c0a0b8e"
-dependencies = [
- "cfg-if 0.1.10",
- "libc",
- "memory_units",
- "winapi",
 ]
 
 [[package]]
